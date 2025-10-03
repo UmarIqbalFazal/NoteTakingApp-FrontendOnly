@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
-import api from "../lib/axios";
+import Navbar from "../components/Navbar.jsx"; 
+import api from "../lib/axios.js";
 import toast from "react-hot-toast";
-import NoteCard from "../components/NoteCard";
-import NotesNotFound from "../components/NotesNotFound";
+import NoteCard from "../components/NoteCard.jsx";
+import NotesNotFound from "../components/NotesNotFound.jsx";
 
 const HomePage = () => {
   const [notes, setNotes] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState(""); // 🔎 new state for search
+  const [search, setSearch] = useState(""); 
 
   // fetch notes (optionally with query)
   const fetchNotes = async (query = "") => {
